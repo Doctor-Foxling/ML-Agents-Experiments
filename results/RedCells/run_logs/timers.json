@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1661029900",
+        "python_version": "3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "D:\\Hamza Logic\\Unity\\ML-Agents\\ML-Agents RL\\venv\\Scripts\\mlagents-learn config\\moveToGoal.yaml --run-id=RedCells",
+        "mlagents_version": "0.29.0",
+        "mlagents_envs_version": "0.29.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.12.1+cu116",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1661029927"
+    },
+    "total": 26.564275600000002,
+    "count": 1,
+    "self": 0.013222300000002463,
+    "children": {
+        "run_training.setup": {
+            "total": 0.3229375000000019,
+            "count": 1,
+            "self": 0.3229375000000019
+        },
+        "TrainerController.start_learning": {
+            "total": 26.228115799999998,
+            "count": 1,
+            "self": 0.000245899999999466,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 26.227856499999998,
+                    "count": 1,
+                    "self": 26.227856499999998
+                },
+                "TrainerController._save_models": {
+                    "total": 1.3400000000274304e-05,
+                    "count": 1,
+                    "self": 1.3400000000274304e-05
+                }
+            }
+        }
+    }
+}
