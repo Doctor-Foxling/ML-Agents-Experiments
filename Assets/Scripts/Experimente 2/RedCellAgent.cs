@@ -14,10 +14,12 @@ public class RedCellAgent : Agent
     [SerializeField] private Material loseMaterial;
     [SerializeField] private MeshRenderer cellMesh;
 
+    public float socialBubble;
+
     private void Start()
     {
         localPosition = transform.localPosition;
-        
+        socialBubble = Random.Range(1f, 1.8f);
     }
     public override void OnEpisodeBegin()
     {
@@ -27,6 +29,7 @@ public class RedCellAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
+        sensor.AddObservation(socialBubble);
         
     }
     public override void OnActionReceived(ActionBuffers actions)
@@ -81,6 +84,8 @@ public class RedCellAgent : Agent
     {
         Debug.Log("Triggered By: " + other.name);
 
+        if (other.gameObject.GetComponent<SphereCollider>())
+
         if (other.TryGetComponent<RedCellAgent>(out RedCellAgent goal))
         {
             SetReward(+0.5f);
@@ -92,15 +97,26 @@ public class RedCellAgent : Agent
         {
             SetReward(-1f);
             cellMesh.material = loseMaterial;
-            EndEpisode();
+            //EndEpisode();
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
+        //Debug.Log("Distance: " + Vector3.Distance(transform.position, other.transform.position));
+        //Debug.Log("Distance2: " + Vector3.Distance(transform.position, other.gameObject.transform.position));
         if (other.TryGetComponent<RedCellAgent>(out RedCellAgent goal))
         {
-            SetReward(+1f);
+            float distance = Vector3.Distance(transform.position, other.transform.position);
+            if (distance < socialBubble)
+            {
+                SetReward(-0.4f);
+            }
+            else
+            {
+                SetReward(+1f);
+                cellMesh.material = winMaterial;
+            }
             //The Episode should end when the agent recieves the final reward, or loses
         }
     }

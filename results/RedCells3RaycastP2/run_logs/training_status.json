@@ -1,0 +1,29 @@
+{
+    "RedCell3Raycast": {
+        "checkpoints": [
+            {
+                "steps": 112800,
+                "file_path": "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-112800.onnx",
+                "reward": null,
+                "creation_time": 1661106032.3960104,
+                "auxillary_file_paths": [
+                    "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-112800.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 112800,
+            "file_path": "results\\RedCells3RaycastP2\\RedCell3Raycast.onnx",
+            "reward": null,
+            "creation_time": 1661106032.3960104,
+            "auxillary_file_paths": [
+                "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-112800.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.12.1+cu116"
+    }
+}

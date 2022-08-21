@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 1133029085862724656}
   - component: {fileID: 1133029085862724663}
   - component: {fileID: -8159704392822254971}
-  - component: {fileID: 5440360100593712706}
   - component: {fileID: 2129713284119530482}
+  - component: {fileID: 2404241715679546145}
   m_Layer: 0
   m_Name: RedCell
   m_TagString: RedCell
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 3
+    VectorObservationSize: 4
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 4
@@ -157,10 +157,10 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 3d751c06725f9f643a4f24d0ffc4a1a4, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: RedCellBehaviour
+  m_BehaviorName: RedCell3Raycast
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -180,11 +180,12 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 10000
+  MaxStep: 2000
   isHeuristic: 0
   winMaterial: {fileID: 2100000, guid: 6a15b1f15432b6f4b9a8066e1e6ca4df, type: 2}
   loseMaterial: {fileID: 2100000, guid: a5b341c061bec574ca486008cfcb23b0, type: 2}
   cellMesh: {fileID: 1369541502706332119}
+  socialBubble: 0
 --- !u!114 &1133029085862724663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,9 +202,9 @@ MonoBehaviour:
   m_DetectableTags:
   - WorldBoundary
   - RedCell
-  m_RaysPerDirection: 3
-  m_MaxRayDegrees: 70
-  m_SphereCastRadius: 1.16
+  m_RaysPerDirection: 1
+  m_MaxRayDegrees: 75
+  m_SphereCastRadius: 1
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
@@ -227,19 +228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 2
   TakeActionsBetweenDecisions: 1
---- !u!135 &5440360100593712706
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8978135747975012348}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2129713284119530482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,3 +244,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &2404241715679546145
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8978135747975012348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
