@@ -157,7 +157,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 3d751c06725f9f643a4f24d0ffc4a1a4, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 8f750b535b49bb844ad4c8d542e00ba5, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: RedCell3Raycast

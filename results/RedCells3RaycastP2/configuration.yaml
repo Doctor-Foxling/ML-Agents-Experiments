@@ -33,7 +33,7 @@ behaviors:
           memory: null
           goal_conditioning_type: hyper
           deterministic: false
-    init_path: results\RedCells3Raycast\RedCell3Raycast\checkpoint.pt
+    init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
     max_steps: 500000
@@ -63,7 +63,7 @@ engine_settings:
 environment_parameters: null
 checkpoint_settings:
   run_id: RedCells3RaycastP2
-  initialize_from: RedCells3Raycast
+  initialize_from: null
   load_model: false
   resume: false
   force: true

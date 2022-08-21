@@ -2,22 +2,31 @@
     "RedCell3Raycast": {
         "checkpoints": [
             {
-                "steps": 112800,
-                "file_path": "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-112800.onnx",
-                "reward": null,
-                "creation_time": 1661106032.3960104,
+                "steps": 499992,
+                "file_path": "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-499992.onnx",
+                "reward": 109.5555551317003,
+                "creation_time": 1661108545.87723,
                 "auxillary_file_paths": [
-                    "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-112800.pt"
+                    "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-499992.pt"
+                ]
+            },
+            {
+                "steps": 500640,
+                "file_path": "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-500640.onnx",
+                "reward": null,
+                "creation_time": 1661108548.3461788,
+                "auxillary_file_paths": [
+                    "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-500640.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 112800,
+            "steps": 500640,
             "file_path": "results\\RedCells3RaycastP2\\RedCell3Raycast.onnx",
             "reward": null,
-            "creation_time": 1661106032.3960104,
+            "creation_time": 1661108548.3461788,
             "auxillary_file_paths": [
-                "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-112800.pt"
+                "results\\RedCells3RaycastP2\\RedCell3Raycast\\RedCell3Raycast-500640.pt"
             ]
         }
     },
